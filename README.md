@@ -1,4 +1,4 @@
-# CowXNet: An Automated Cow Estrus Detection System
+# CowXNet
 This is an official implementation of a paper titled "[CowXNet: An Automated Cow Estrus Detection System](https://doi.org/10.1016/j.eswa.2022.118550)".
 
 ## Dataset
