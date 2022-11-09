@@ -14,7 +14,7 @@ This is an official implementation of a paper titled "[CowXNet: An Automated Cow
 Please refer to `visualize.py` for creating visualizations like the below ones.
 
 <p align="center" width="100%">
-  <img width="25%" src="/images/detect_result.jpg">
-  <img width="25%" src="/images/keypoint_result.jpg">
-  <img width="25%" src="/images/result.jpg">
+  <img width="30%" src="/images/detect_result.jpg">
+  <img width="30%" src="/images/keypoint_result.jpg">
+  <img width="30%" src="/images/result.jpg">
 </p>
