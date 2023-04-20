@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="description" content="Estrus detection is essential for dairy farms to take cows for artificial insemination promptly. Conventional approaches for detecting estrus cows use electronic devices attached to cows to gather data for software analysis. However, electronic devices can be costly and make a cow moody and uncomfortable while moving. In a common approach, observers detect estrus cows by observing their behaviors. However, continuous observation can easily lead to errors due to the observer’s fatigue. Therefore, we designed CowXNet, an automatic estrus detection system for cows, to assist farmers to detect estrus cows. CowXNet requires only a camera attached in a pen and a computer to analyze recorded videos. CowXNet analyzes the estrus behaviors of each cow in a pen and helps farmers to identify estrus cows.">
+  <meta property="og:title" content="CowXNet: An Automated Cow Estrus Detection System"/>
+  <meta property="og:description" content="Estrus detection is essential for dairy farms to take cows for artificial insemination promptly. Conventional approaches for detecting estrus cows use electronic devices attached to cows to gather data for software analysis. However, electronic devices can be costly and make a cow moody and uncomfortable while moving. In a common approach, observers detect estrus cows by observing their behaviors. However, continuous observation can easily lead to errors due to the observer’s fatigue. Therefore, we designed CowXNet, an automatic estrus detection system for cows, to assist farmers to detect estrus cows. CowXNet requires only a camera attached in a pen and a computer to analyze recorded videos. CowXNet analyzes the estrus behaviors of each cow in a pen and helps farmers to identify estrus cows."/>
+  <meta property="og:url" content="https://dsmlr.github.io/CowXNet/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:title" content="CowXNet: An Automated Cow Estrus Detection System">
+  <meta name="twitter:description" content="Estrus detection is essential for dairy farms to take cows for artificial insemination promptly. Conventional approaches for detecting estrus cows use electronic devices attached to cows to gather data for software analysis. However, electronic devices can be costly and make a cow moody and uncomfortable while moving. In a common approach, observers detect estrus cows by observing their behaviors. However, continuous observation can easily lead to errors due to the observer’s fatigue. Therefore, we designed CowXNet, an automatic estrus detection system for cows, to assist farmers to detect estrus cows. CowXNet requires only a camera attached in a pen and a computer to analyze recorded videos. CowXNet analyzes the estrus behaviors of each cow in a pen and helps farmers to identify estrus cows.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -172,13 +172,21 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">โครงสร้างของ CowXNet</h2>
+        <h2 class="title is-3">การติดตั้งระบบ</h2>
+        <div class="content has-text-justified">
+          <p>
+            สำหรับการติดตั้งระบบนั้น มีสิ่งจำเป็นอยู่แค่สองอย่าง นั้นก็คือกล้องวิดีโอและเครื่องคอมพิวเตอร์สำหรับการประมวลผล ดังภาพด้านล่าง
+          </p>
+        </div>
         <div>
-          <img src="static/images/cowxnet_system_overview.png" style="height: 60%; width: 60%;"/>
+          <img src="static/images/camera-setting.jpeg" style="height: 70%; width: 70%;"/>
+          <p>
+            <i>ภาพที่ 1: ตัวอย่างการติดตั้งระบบเพื่อใช้งาน</i>
+          </p>
         </div>
         <div class="content has-text-justified">
           <p>
-            CowXNet มีสี่โมเดลหลัก คือ (1) Cow detection: ตรวจจับโคในวิดีโอที่บันทึกไว้ (2) Body part detection: ตรวจจับส่วนของร่างกายโคทั้งสามส่วนประกอบไปด้วย จมูก กลางลำตัว และต้นหาง (3) Estrus detection: ตรวจจับพฤติกรรมการเป็นสัด โดยใช้ประโยชน์จากพิกัดส่วนของร่างกายของโคทุกตัว และ (4) Behavior analysis: วิเคราะห์ความถี่ในการแสดงพฤติกรรมเป็นสัดของโค เพื่อเป็นข้อมูลในการช่วยตัดใจว่าโคเป็นสัดหรือไม่
+            ซึ่งในงานวิจัยเราได้ทำการเก็บรวบรวมข้อมูล ณ ฟาร์มโชคชัย อำเภอปากช่อง จังหวัดนครราชสีมา ที่ซึ่งเป็นฟาร์มโคนมที่ใหญ่ที่สุดในเอเชีย ในการเตรียมคอกเพื่อเก็บรวบรวมข้อมูลนั้น ผู้เชี่ยวชาญของฟาร์มนำโคพันธุ์โฮลสไตน์ฟรีเซียนที่เป็นสัดจำนวน 3 ตัว โดยโคเหล่านั้นมีอายุสี่ปีและหนักประมาณ 450 กก. โดยปกติแล้ว เมื่อวัวมีที่เหมือนกำลังเป็นสัดและหากตรวจเจอว่าเป็นสัดก็จะถูกแยกออกไปยังคอกที่เตรียมไว้สำหรับเลี้ยงโคที่เป็นสัด ซึ่งคอกที่เราใช้จะเป็นคอกขนาด 3 × 6 ตร.ม. ที่มีการติดตั้งกล้องวิดีโอด้านบนตรงกลางเพดานของคอก กล้อง FireFly® MV CMOS USB ที่มีเลนส์ฟิชอาย 2.8–8 มม. ถูกนำมาใช้เพื่อเพิ่มมุมมอง โดยตัวกล้องจะถูกเชื่อมต่อไปยังคอมพิวเตอร์ส่วนบุคคลผ่านสาย USB โดยบันทึกวิดีโอที่ 1.5 เฟรมต่อวินาที แต่ละภาพเป็นภาพ RGB 24 บิต 1280 × 960 พิกเซล และจัดเก็บไว้ในรูป Tagged Image File Format (TIFF)
           </p>
         </div>
       </div>
@@ -186,40 +194,94 @@
   </div>
 </section>
 
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">โครงสร้างของ CowXNet</h2>
+        <div>
+          <img src="static/images/cowxnet_system_overview.png" style="height: 60%; width: 60%;"/>
+          <p>
+            <i>ภาพที่ 2: โครงสร้างโดยรวมของ CowXNet</i>
+          </p>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            CowXNet มีสี่โมเดลหลัก คือ
+          </p>
+          <ol type="i">
+            <li>Cow detection: ตรวจจับโคในวิดีโอที่บันทึกไว้ โดยโมเดลนี้จะรับภาพเฟรมเข้ามา และผลลัพธ์จากการตรวจจับตำแหน่งของโคในแต่ละภาพจะถูกนำไปใช้ต่อในโมเดลถัดไป</li>
+            <li>
+              Body part detection: ตรวจจับส่วนของร่างกายโคทั้งสามส่วนประกอบไปด้วย จมูก กลางลำตัว และต้นหาง ซึ่งโคมักจะใช้อวัยวะเหล่านี้ในการแสดงพฤติกรรมเป็นสัดต่าง ๆ เช่น การดม การเอาลำตัวเสียดสีกัน และการขึ้นขี่ เป็นต้น โดยโมเดลนี้จะรับภาพของโคหนึ่งตัว และให้ผลลัพธ์ออกมาเป็นตำแหน่งของอวัยวะต่าง ๆ ดังภาพด้านล่าง ซึ่งตำแหน่งอวัยวะต่าง ๆ ของโคทุกตัวจะถูกนำไปใช้ต่อในโมเดลถัดไป
+              <div style="text-align: center;">
+                <img src="static/images/cow-keypoint-model.jpg" style="height: 60%; width: 60%;"/>
+                <p>
+                  <i>ภาพที่ 3: โครงสร้างของโมเดล Body part detection</i>
+                </p>
+              </div>
+            </li>
+            <li>Estrus detection: ตรวจจับพฤติกรรมการเป็นสัด โมเดลนี้จะใช้พิกัดส่วนของอวัยวะทั้งสามส่วนของโคทุกตัวไปคำนวณเพื่อที่จะได้เวกเตอร์ของโคแต่ละตัวออกมา โดยเวกเตอร์เหล่านั้นจะเป็นตัวบ่งบอกว่าโคแสดงพฤติกรรมเป็นสัดหรือไม่ในเฟรมนั้น ๆ สำหรับอัลกอริทึมที่เราใช้ในการหาเวกเตอร์นั้น เราได้คิดค้นขึ้นมาจากการวิเคราะห์พฤติกรรมเป็นสัดของโคสามพฤติกรรมเป็นหลัก คือ การดม การขึ้นขี่ และความถี่ในการเดิน หนึ่งในตัวอย่างของค่าในเวกเตอร์คือ ระยะห่างระหว่างจมูกของโคที่เรากำลังพิจารณาว่าแสดงพฤติกรรมเป็นสัดหรือไม่กับต้นหางของโคตัวที่อยู่ใกล้ที่สุด (หน่วยเป็นพิกเซล)</li>
+            <li>
+              Behavior analysis: วิเคราะห์ความถี่ในการแสดงพฤติกรรมเป็นสัดของโค เพื่อเป็นข้อมูลในการช่วยตัดใจว่าโคเป็นสัดหรือไม่ โมเดลนี้จะนำผลการวิเคราะห์พฤติกรรมของโคในแต่ละเฟรมมาแสดงผลเป็นกราฟดังภาพด้านล่าง 
+              <div style="text-align: center;">
+                <img src="static/images/behavior-analysis-pd-a.png" style="height: 60%; width: 60%;"/>
+                <img src="static/images/behavior-analysis-pd-b.png" style="height: 60%; width: 60%;"/>
+                <img src="static/images/behavior-analysis-pd-c.png" style="height: 60%; width: 60%;"/>
+                <p>
+                  <i>ภาพที่ 4: กราฟแสดงความถี่งในการแสดงพฤติกรรมเป็นสัด</i>
+                </p>
+              </div>
+              โดยแกน x คือเฟรม และ แกน y คือจำนวนเฟรมที่โคแสดงพฤติกรรมเป็นสัดอย่างต่อเนื่อง เช่น ค่า y ที่เฟรมที่หกจะเป็น 3 ถ้าในเฟรมที่สี่ ห้า และหก โคแสดงพฤติกรรมเป็นสัด ดังนั้นที่เฟรมที่สี่และห้าจะมีค่า y เป็น 1 และ 2 ตามลำดับ และถ้าเฟรมที่เจ็ดโคไม่ได้แสดงพฤติกรรมเป็นสัด ค่า y ก็จะเป็น 0 และเริ่มนับใหม่เมื่อโคแสดงพฤติกรรมเป็นสัด เป็นต้น
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">นำ CowXNet ไปใช้การช่วยติดสินใจได้อย่างไร?</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>จากกราฟในภาพที่ 4 เราจะเห็นได้ว่าโค A และ C แสดงพฤติกรรมเป็นสัดค่อนข้างถี่ นั้นหมายความว่าโคเหล่านี้มีโอกาศที่จะเป็นสัดในช่วงนี้ ในทางกลับกันโค B แสดงพฤติกรรมเป็นสัดค่อนข้างน้อย เราอาจจะอนุมานได้ว่าโคตัวนี้อาจจะไม่ได้เป็นสัดในช่วงนี้</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Image carousel -->
-<!-- <section class="hero is-small">
+<section class="hero is-light">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+       <div class="item" style="text-align: center;">
+        <img src="static/images/great_estrus_img0298_2.jpg" style="height: 60%; width: 60%;"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          ภาพตัวอย่างจากระบบ 1: โคที่อยู่ในกรอบสีฟ้าคือโคที่ถูกระบบพิจารณาว่า "กำลังแสดงพฤติกรรมเป็นสัด"
         </h2>
       </div>
-      <div class="item">
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/great_estrus_img0607_2.jpg" style="height: 60%; width: 60%;"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          ภาพตัวอย่างจากระบบ 2: โคที่อยู่ในกรอบสีฟ้าคือโคที่ถูกระบบพิจารณาว่า "กำลังแสดงพฤติกรรมเป็นสัด"
         </h2>
       </div>
-      <div class="item">
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/great_estrus_img1268_2.jpg" style="height: 60%; width: 60%;"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          ภาพตัวอย่างจากระบบ 3: โคที่อยู่ในกรอบสีฟ้าคือโคที่ถูกระบบพิจารณาว่า "กำลังแสดงพฤติกรรมเป็นสัด"
        </h2>
      </div>
-     <div class="item">
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
-</section> -->
+</section>
 <!-- End image carousel -->
 
 
@@ -295,12 +357,17 @@
 
 
 <!--BibTex citation -->
-  <!-- <section class="section" id="BibTeX">
+  <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <h2 class="title">เอกสารอ้างอิง</h2>
+      <!-- <pre><code>BibTex Code Here</code></pre> -->
+      <ol type="1">
+        <li>Thanawat Lodkaew, Kitsuchart Pasupa, Chu Kiong Loo, "CowXNet: An Automated Cow Estrus Detection System", In Expert Systems with Applications, vol. 211, pp. 118550, 2023.</li>
+        <li>Kitsuchart Pasupa, Thanawat Lodkaew, "An Approach to Detect Heat Behaviour in Cattle", Department of Intellectual Property, Thailand, 2021.</li>
+        <li>Kitsuchart Pasupa, Thanawat Lodkaew, "A New Approach to Automatic Heat Detection of Cattle in Video", In Proceedings of the 26th International Conference on Neural Information Processing (ICONIP 2019), 12-15 Dec 2019, Sydney, Australia (Tamás Gedeon, Kevin Wong, Minho Lee, eds.), Springer International Publishing, vol. 1143, pp. 330-337, 2019.</li>
+      </ol>
     </div>
-</section> -->
+</section>
 <!--End BibTex citation -->
 
 
